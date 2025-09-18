@@ -1,0 +1,105 @@
+
+=====DSA3 second Review===
+
+// class MinHeap{
+//     constructor(){
+//         this.heap=[];
+//     }
+    
+//     getParentIndex(i){return Math.floor((i-1)/2)}
+//     getLeftIndex(i){return 2*i+1}
+//     getRightIndex(i){return 2*i+2}
+    
+//     swap(i,j){
+//         [this.heap[i],this.heap[j]] = [this.heap[j],this.heap[i]];
+//     }
+    
+//     insert(value){
+//         this.heap.push(value);
+//         this.heapifyUp();
+//     }
+    
+//     heapifyUp(){
+//         let index = this.heap.length-1;
+//         let parentIndex = this.getParentIndex(index);
+        
+//         while(index>0){
+           
+//             if(this.heap[index]<this.heap[parentIndex]){
+                
+//                 this.swap(index,parentIndex);
+//                 index = parentIndex;
+//             }else break;
+//         }
+        
+//     }
+// }
+
+
+// const heap = new MinHeap();
+
+// heap.insert(15);
+// heap.insert(10);
+// heap.insert(8);
+// heap.insert(20);
+// heap.insert(18);
+
+// console.log(heap.heap)
+
+
+
+class TrieNode{
+    constructor(){
+        this.children={};
+        this.isEndOfWord=false;
+    }
+}
+
+
+class Trie{
+    constructor(){
+        this.root= new TrieNode();
+    }
+    
+    insert(word){
+        let node = this.root;
+        
+        for(let char of word){
+            if(!node.children[char]){
+                node.children[char] = new TrieNode();
+            }
+        }
+        node.isEndOfWord = true;
+    }
+    
+    autoSuggestion(path, node=this.root, results=[]){
+        
+        if(node.isEndOfWord) return results;
+        
+        for(let char of path){
+            if(!node.children[char]) return [];
+            results.push(path);
+            
+            for(let char in node.children){
+                this.autoSuggestion( path+char, node.children[char],results);
+                
+            }
+            
+        }
+    }
+}
+
+
+const tri = new Trie();
+
+tri.insert("apple");
+tri.insert("application");
+console.log(tri.autoSuggestion("app"));
+
+
+
+
+
+
+
+

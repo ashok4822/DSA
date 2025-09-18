@@ -1,0 +1,358 @@
+====RECURSION====
+
+1.Factorial of a number  [O(n)]
+
+function factorial(n){
+    if(n===0) return 1;
+    return n*factorial(n-1);
+}
+
+console.log(factorial(5));
+
+
+-----------------------------
+
+2.Fibonacci  [O(2^n) - exponential]
+
+function fibonacci(n){
+    if(n===0) return 0;
+    if(n===1) return 1;
+    return fibonacci(n-1)+fibonacci(n-2);
+}
+
+console.log(fibonacci(5));
+
+
+-----------------------------
+
+3.Reverse a string using Recursion  [O(n^2)]
+
+function reverseString(str){
+    if(str==="") return "";
+    return reverseString(str.slice(1))+str[0];
+}
+
+console.log(reverseString("hello"));
+
+
+------------------------------
+
+4.Sum of Digits   [O(d)]  d->number of digits
+
+
+function sumOfDigits(num){
+    if(num===0) return 0;
+    return (num%10)+sumOfDigits(Math.floor(num/10));
+}
+
+console.log(sumOfDigits(14))
+
+
+------------------------------
+
+
+5.Pallindrome  [O(n)]
+
+function isPalindrome(str){
+    if(str.length<=1) return true;
+    if(str[0] !== str[str.length-1]) return false;
+    return isPalindrome(str.slice(1,-1));
+}
+
+console.log(isPalindrome("hello"));
+console.log(isPalindrome("malayalam"));
+
+
+----------------------------------
+
+
+6.Flatten a Nested Array  [O(n^2)]
+
+function flattenArray(arr){
+    let result=[];
+    for(let el of arr){
+        if(Array.isArray(el)){
+            result =  result.concat(flattenArray(el));
+        } else{
+            result.push(el);
+        }
+    }
+    return result;
+}
+
+console.log(flattenArray([1,[2,[3,4],5],6]));
+
+
+-----------------------------------
+
+
+7.Count Digits in a Number   [O(log n)]
+
+function countDigits(num){
+    if(num===0) return 0;
+    return 1 + countDigits(Math.floor(num/10));
+}
+
+console.log(countDigits(12345));
+
+
+-----------------------------------
+
+8.Power of a number  [O(exp)]
+
+function power(base,exp){
+    if(exp===0) return 1;
+    return base*power(base,exp-1);
+}
+
+console.log(power(2,5));
+
+
+
+-------------------------------
+
+
+9. Greatest Common Divisor  [O(log(min(a,b)))]
+
+function gcd(a,b){
+    if(b===0) return a;
+    return gcd(b,a%b);
+}
+
+console.log(gcd(48,18));
+
+
+-------------------------------
+
+
+10.First 10 elements of Fibonacci using recursion  [O(n)]
+
+ 
+function printFibonacci(n,a=0,b=1){
+    if(n===0) return;
+    console.log(a);
+    printFibonacci(n-1,b,a+b);
+}
+
+printFibonacci(10);
+
+
+-------------------------------
+
+11.Sum of an array  [O(n^2)]
+
+
+function sumArray(arr){
+    if(arr.length===0) return 0;
+    return arr[0] + sumArray(arr.slice(1));
+}
+
+console.log(sumArray([1,2,3,4]));
+
+
+--------------------------------
+
+
+12.Find Max in an Array  [O(n^2)]
+
+function findMax(arr){
+    if(arr.length===1) return arr[0];
+    return Math.max(arr[0],findMax(arr.slice(1)));
+}
+
+console.log(findMax([10,3,45,6,22]));
+
+
+
+
+
+
+========================
+========================
+========================
+========================
+
+
+===Linked List===
+
+1.Singly Linked list
+
+class Node{
+  constructor(data){
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class SinglyLinkedList{
+    constructor(){
+        this.head=null;
+        this.size=0;
+    }
+
+    prepend(data){     //O(1)
+        const newNode = new Node(data);
+        newNode.next=this.head;
+        this.head=newNode;
+    }
+
+    append(data){
+        const newNode = new Node(data);
+        let current = this.head;
+        while(current.next){
+            current=current.next;
+        }
+        current.next=newNode;
+    }
+
+    remove(index){
+
+        if(!this.head){
+            console.log("empty");
+            
+        }
+        // if(index===0){
+        //     this.head = this.head.next;
+        // }
+        let count = 0;
+        let prev = null;
+        let curr = this.head;
+// 2>0
+        while(index>count){
+             prev = curr;
+             curr = curr.next;
+             count++
+        }
+        prev.next=curr.next;
+         
+    }
+
+    print(){
+        let current=this.head;
+        while(current){
+            console.log(current.data);
+            current=current.next;
+        }
+    }
+}
+
+
+const list = new SinglyLinkedList();
+list.prepend(20);
+list.prepend(30);
+list.prepend(40);
+list.prepend(50);
+
+list.remove(2)
+list.print();
+console.log(list)
+
+
+
+--------------------------------
+
+2. Doubly Linked List
+
+class Node{
+    constructor(data){
+        this.data=data;
+        this.prev=null;
+        this.next=null;
+    }
+}
+
+
+class DoublyLinkedList{
+    constructor(){
+        this.head=null;
+    }
+    
+    prepend(data){
+        const newNode = new Node(data);
+        if(!this.head) return (this.head=newNode);
+        newNode.next=this.head;
+        this.head.prev=newNode;
+        this.head=newNode;
+    }
+    
+    append(data){
+        const newNode = new Node(data);
+        
+        let current = this.head;
+        while(current.next){
+            current=current.next
+        }
+        current.next=newNode;
+        newNode.prev=current;
+    }
+    
+    delete(index){
+        let count=0;
+        let prev=null;
+        let current = this.head;
+        while(index>count){
+            prev = current;
+            current=current.next
+            count++;
+        }
+        prev.next=current.next;
+        current.next.prev=prev;
+    }
+    
+    middleElem(){
+        let slow=this.head;
+        let fast=this.head;
+        while(fast && fast.next){
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+        console.log(slow.data);
+    }
+    
+print() {
+    let current = this.head;
+    while (current) {
+        const prevData = current.prev ? current.prev.data : null;
+        const nextData = current.next ? current.next.data : null;
+        console.log(`${prevData} | ${current.data} | ${nextData} ->`);
+        current = current.next;
+    }
+}
+
+}
+
+
+let list = new DoublyLinkedList();
+list.prepend(10);
+list.prepend(20);
+list.prepend(30);
+list.prepend(40);
+// list.prepend(50);
+list.middleElem()
+
+
+
+
+
+
+
+=====================
+=====================
+=====================
+=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

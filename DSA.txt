@@ -1,0 +1,129 @@
+
+O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
+
+
+🔹DSA- 1
+
+1.  Learn what is Data Structure & Algorithms.  ==T
+
+2.  Learn the basics of Memory Allocation and Memory leak. ==T
+
+3.  Learn the concept of Complexity Analysis. (NB: The complexity of common operations of all data structures should be covered.)  ==T?
+
+4.  Learn about Asymptotic analysis (Big-O notation).  ==T?
+
+5.  Learn the concepts of Array. (Complete at least three sample workouts & do at least 3 problems from any competitive coding websites (Hacker Rank, Code Chef, Leet code, Algo Expert, etc.))  ==(T + P)
+
+6.  Learn the concepts of the Linked list. Complete at least three sample workouts  ==(T + P)
+      > Construction of Singly linked list & Doubly linked list.  ==P?
+      > Convert array to a linked list  ==P?
+      > Add a node at the end & beginning ==P?
+      > Delete node with the value specified ==P?
+      > Insert a node after & before a node with x data ==P?
+      > Print all elements by order & reverse by order ==P?
+      > Write a program to remove duplicates in a sorted singly linked list ==P?
+
+
+7.  Learn the concepts of String. Complete at least three sample workouts. ==(T + P)
+      Eg: Write a function to replace each alphabet in the given string with another alphabet occurring at the n-th position from each of them. ==P?
+
+8.  Learn about Linear Search & Binary Search. Complete at least 3 sample workouts in each of them ==(T + P)
+
+9.  Learn the concepts of Recursion. Complete at least 3 sample workouts. ==(T + P)
+
+10. Learn about the applications of all structures you covered this week ==(T + P)?
+
+
+Every day, cover all the topics of the week. upgrade layer in depth one step each day.
+
+03/08 - FIRST LAYER ✅
+04/08 - SECOND LAYER
+05/08 - THIRD LAYER
+06/08 - FOURTH LAYER
+07/08 - FIFTH LAYER
+08/08 - SIXTH LAYER
+09/08 - REVISION
+10/08 - REVISION
+
+===========================================================================================
+
+🔹DSA- 2
+
+1. Learn about Bubble Sort, Insertion Sort, Selection Sort, Quick sort and Merge sort. 
+	Complete at least three sample workouts in each of them.
+
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+2.  Learn the concept of Stack and Queue.
+	Complete at least three sample workouts in each of them & do at least 3 problems from any competitive coding websites (Hacker Rank, Code Chef, Leet code, Algo Expert, etc.)
+	> PUSH, POP and Display elements in Stack 
+	> Enqueue, Dequeue and Display elements in Queue
+
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+3.  Learn the concepts of Hash Table. Complete at least 3 sample workouts.
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+4. Learn about the Applications of all structures you covered this week
+	Write a short description about this task
+
+
+12/08 - 1
+13/08 - 2
+14/08 - 3
+15/08 - 4
+
+
+
+🔹DSA- 3
+
+1. Learn the concepts of Tree. Complete at least three sample workouts.
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+2. Learn the concepts of Binary Search Tree. Complete at least three sample workouts. 
+	Example:
+	> Create a Binary Search Tree with insertion, contains, delete, three traversals (postorder, preorder, in order).
+	> Find the closest value to a given number in a Tree.
+	> Validate whether a given tree is BST or not.
+
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+3. Learn the concepts of Heap. Complete at least three sample workouts.
+	Example:
+	> Create a min heap & max heap with build, insert, remove.
+
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+4. Learn the concept of Heap sort. Complete at least three sample workouts
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+5. Learn the concepts of Trie. Complete at least 3 sample workouts.
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+6. Learn the concepts of Graph. Complete at least three sample workouts.
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+7. Learn the concepts of Graph traversals (BFS, DFS).
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+8. Do at least 3 problems each for every structure from any competitive coding websites 
+	Write a short description about this task
+	Attach the screenshot of code and screenshot of the output
+
+9. Learn about the applications of all structures you covered this week
+	Write a short description about this task
+
+
+
+
+
