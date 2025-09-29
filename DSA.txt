@@ -1,4 +1,6 @@
 
+☑️ strivers dsa a2z
+
 O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ) < O(n!)
 
 
@@ -125,5 +127,42 @@ Every day, cover all the topics of the week. upgrade layer in depth one step eac
 
 
 
+========================================
+**** Pendings ****
+
+DSA1 pending
+Sparse array
+Linear vs non linear ds
 
 
+DSA2 pending
+-Time complexity of quick sort in worst case 
+-find the second smallest word in sentence 
+-Remove duplicates from array using hastable
+
+DSA2 pending
+- Stable sorting
+- ⁠Which sorting is best for linked list
+- ⁠Stack using linked list
+- ⁠Practice leetcode questions daily
+
+
+DSA3 pending
+-Remove duplicates from BT 
+-Find the third largest word in sentence 
+-Time complexity of DFS
+
+DSA3 pending
+-https://leetcode.com/problems/same-tree/description/
+-Auto Completion using trie
+-real-world applications of Trees
+
+
+
+
+===================
+daytime for study and important home activities only
+3 nighttime also for study
+
+review completed day/Saturday night for leisure 
+===================

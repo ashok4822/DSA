@@ -1247,8 +1247,15 @@ graph.dfs("A");
 
 
 
+========================
 
+javascript 
+pendings(dsa 1,2,3)
+dsa1 implementation
+dsa2 implementation
+dsa3 implementation
 
+========================
 
 
 

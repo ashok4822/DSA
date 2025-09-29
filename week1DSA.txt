@@ -25,7 +25,21 @@ console.log(fibonacci(5));
 
 -----------------------------
 
-3.Reverse a string using Recursion  [O(n^2)]
+3.First 10 elements of Fibonacci using recursion  [O(n)]
+
+ 
+function printFibonacci(n,a=0,b=1){
+    if(n===0) return;
+    console.log(a);
+    printFibonacci(n-1,b,a+b);
+}
+
+printFibonacci(10);
+
+
+-------------------------------
+
+4.Reverse a string using Recursion  [O(n^2)]
 
 function reverseString(str){
     if(str==="") return "";
@@ -37,7 +51,7 @@ console.log(reverseString("hello"));
 
 ------------------------------
 
-4.Sum of Digits   [O(d)]  d->number of digits
+5.Sum of Digits   [O(d)]  d->number of digits
 
 
 function sumOfDigits(num){
@@ -51,7 +65,7 @@ console.log(sumOfDigits(14))
 ------------------------------
 
 
-5.Pallindrome  [O(n)]
+6.Pallindrome  [O(n)]
 
 function isPalindrome(str){
     if(str.length<=1) return true;
@@ -66,7 +80,7 @@ console.log(isPalindrome("malayalam"));
 ----------------------------------
 
 
-6.Flatten a Nested Array  [O(n^2)]
+7.Flatten a Nested Array  [O(n^2)]
 
 function flattenArray(arr){
     let result=[];
@@ -86,7 +100,7 @@ console.log(flattenArray([1,[2,[3,4],5],6]));
 -----------------------------------
 
 
-7.Count Digits in a Number   [O(log n)]
+8.Count Digits in a Number   [O(log n)]
 
 function countDigits(num){
     if(num===0) return 0;
@@ -98,7 +112,7 @@ console.log(countDigits(12345));
 
 -----------------------------------
 
-8.Power of a number  [O(exp)]
+9.Power of a number  [O(exp)]
 
 function power(base,exp){
     if(exp===0) return 1;
@@ -112,7 +126,7 @@ console.log(power(2,5));
 -------------------------------
 
 
-9. Greatest Common Divisor  [O(log(min(a,b)))]
+10. Greatest Common Divisor  [O(log(min(a,b)))]
 
 function gcd(a,b){
     if(b===0) return a;
@@ -125,19 +139,7 @@ console.log(gcd(48,18));
 -------------------------------
 
 
-10.First 10 elements of Fibonacci using recursion  [O(n)]
 
- 
-function printFibonacci(n,a=0,b=1){
-    if(n===0) return;
-    console.log(a);
-    printFibonacci(n-1,b,a+b);
-}
-
-printFibonacci(10);
-
-
--------------------------------
 
 11.Sum of an array  [O(n^2)]
 
@@ -155,9 +157,16 @@ console.log(sumArray([1,2,3,4]));
 
 12.Find Max in an Array  [O(n^2)]
 
-function findMax(arr){
-    if(arr.length===1) return arr[0];
-    return Math.max(arr[0],findMax(arr.slice(1)));
+//function findMax(arr){
+//    if(arr.length===1) return arr[0];
+//    return Math.max(arr[0],findMax(arr.slice(1)));
+//}
+
+function findMax(arr,i=0,max=-Infinity){
+    if(i===arr.length) return max;
+    if(arr[i]>max) max=arr[i];
+    return findMax(arr,i+1,max);
+    
 }
 
 console.log(findMax([10,3,45,6,22]));
